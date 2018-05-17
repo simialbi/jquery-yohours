@@ -1,0 +1,45 @@
+{
+	"name": "jquery-yohours",
+	"description": "Jquery and bootstrap based input widget to create opening_hours data",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Simon Karlen",
+			"email": "simi.albi@gmail.com",
+			"homepage": "https://github.com/simialbi"
+		},
+		{
+			"name": "Adrien PAVIE",
+			"email": "adrien@pavie.info",
+			"homepage": "https://pavie.info/realisations.html#perso"
+		}
+	],
+	"main": [
+		"dist/css/yohours.css",
+		"dist/js/yohours.min.js"
+	],
+	"keywords": [
+		"openstreetmap",
+		"jquery",
+		"plugin",
+		"opening_hours",
+		"opening",
+		"hours"
+	],
+	"dependencies": {
+		"jquery": "~3.0",
+		"bootstrap": "~3.0|~4.0",
+		"moment": "~2.0",
+		"fullcalendar-browser": "~1.5",
+		"jsmart": "~3.1",
+		"jed": "~1.1"
+	},
+	"license": "LICENSE",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

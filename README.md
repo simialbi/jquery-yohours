@@ -71,7 +71,7 @@ TODO
 ## License
 
 
-Copyright 2015 Adrien PAVIE
+Copyright 2015 Adrien PAVIE, 2018 Simon Karlen
 
 See [LICENSE](LICENSE) for complete AGPL3 license.
 
