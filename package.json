@@ -19,9 +19,9 @@
 		"url": "git://github.com/simialbi/jquery-yohours.git"
 	},
 	"peerDependencies": {
-		"jquery": "^3.0",
+		"jquery": "2 - 3",
 		"bootstrap": "^3.0 || ^4.0",
-		"moment": "^2.0",
+		"moment": "^2.20.1",
 		"fullcalendar-browser": "^1.5",
 		"jsmart": "^3.1",
 		"jed": "^1.1"
