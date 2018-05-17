@@ -64,8 +64,64 @@ The elements which are present in the [opening_hours formal specification](https
 
 #### Installation
 
-TODO
+##### Using Bower
+You can use the `bower` package manager to install. Run:
 
+    bower install jquery-yohours
+
+##### Using npm
+You can use the `npm` package manager to install. Run:
+
+    npm install jquery-yohours
+
+##### Manual
+
+Download the source [ZIP](https://github.com/simialbi/jquery-yohours/zipball/master)
+or [TAR](https://github.com/simialbi/jquery-yohours/tarball/master) and extract the
+plugin assets into your project (dist folder contents).
+
+#### Load assets
+
+Load the following in your header:
+
+```html
+<!-- bootstrap 3 and 4 are supported -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="path/to/dist/css/yohours.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/caret/1.0.0/jquery.caret.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment-with-locales.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsmart/dist/jsmart.min.js" crossorigin="anonymous"></script>
+<script src="path/to/dist/js/jed.min.js"></script>
+<!-- Optional: Load i18n translation -->
+<script src="path/to/dist/js/i18n/en.min.js"></script>
+<script src="path/to/dist/js/yohours.min.js"></script>
+```
+
+> Note: All dependencies required by `yohours` are included in the example above.
+
+#### Init Widget
+
+````html
+<div class="form-group">
+	<label for="myOpeningHours">Opening Hours</label>
+	<input type="text" id="myOpeningHours" class="form-control">
+</div>
+
+<script>
+	$('#myOpeningHours').yoHours({
+		bootstrapVersion: 'bootstrap3', // or bootstrap4
+		delay: 700, // in ms, delay before plugin starts parsing input string
+		height: 600, // in pixels, max height of calendar
+		locale: 'en' // must be loaded before yohours like in example above
+	});
+</script>
+````
 
 
 ## License
