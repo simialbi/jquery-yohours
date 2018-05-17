@@ -1,0 +1,336 @@
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Toggle navigation"
+msgstr "Navigation aus-/einklappen"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Calendar defining"
+msgstr "Dieser Kalender definiert"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Select date range"
+msgstr "Zeitspanne wählen"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Always"
+msgstr "Immer"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Month"
+msgstr "Monat"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Week"
+msgstr "Woche"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Day"
+msgstr "Tag"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Holiday"
+msgstr "Ferien"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "This calendar will define all weeks of the year"
+msgstr "Dieser Kalender definiert alle Wochen im Jahr"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end month is optional"
+msgstr "Das Feld 'Ende' ist optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end week is optional"
+msgstr "Das Feld 'Ende' ist optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end day is optional"
+msgstr "Das Feld 'Ende' ist optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "(not set)"
+msgstr "(nicht gesetzt)"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Start"
+msgstr "Start"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "End"
+msgstr "Ende"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "January"
+msgstr "Januar"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "February"
+msgstr "Februar"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "March"
+msgstr "März"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "April"
+msgstr "April"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "May"
+msgstr "Mai"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "June"
+msgstr "Juni"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "July"
+msgstr "Juli"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "August"
+msgstr "August"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "September"
+msgstr "September"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "October"
+msgstr "Oktober"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "November"
+msgstr "November"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "December"
+msgstr "Dezember"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "School holidays"
+msgstr "Schulferien"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Public holidays"
+msgstr "Feiertage"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Easter"
+msgstr "Ostern"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Close"
+msgstr "Schliessen"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "OK"
+msgstr "OK"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "All year"
+msgstr "Standard"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Add new date range"
+msgstr "Neue Zeitspanne"
+
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week of year"
+msgstr "jede Woche im Jahr"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "invalid time"
+msgstr "ungültige Zeitspanne"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from %s %u to %s %u"
+msgstr "jede Woche vom %2$u. %1$s bis %4$u. %3$s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "day %s %u"
+msgstr "den %2$u. %1$s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from week %u to %u"
+msgstr "jede Woche von Woche %u bis %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "week %u"
+msgstr "Woche %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from %s to %s"
+msgstr "jede Woche von %s bis %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week in %s"
+msgstr "jede Woche im %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week during school holidays"
+msgstr "jede Woche während den Schulferien"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every public holidays"
+msgstr "während der Feiertage"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "each easter day"
+msgstr "jeder Ostertag"
+
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start day and month can't be null"
+msgstr "Startdatum und -monat sind Pflichtfelder"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start week can't be null"
+msgstr "Startwoche ist ein Pflichtfeld"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start month can't be null"
+msgstr "Startmonat ist ein Pflichtfeld"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday, must be PH, SH or easter"
+msgstr "Ungültige Ferienselektion: Muss 'PH', 'SH' oder 'easter' sein"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday type: %s"
+msgstr "Ungültiger Ferientyp: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid interval"
+msgstr "Ungültiges Intervall"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Missing parameter"
+msgstr "Fehlender Parameter"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid parameter"
+msgstr "Ungültiger Parameter"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This date can't be added to this rule"
+msgstr "Dieses Datum kann der Regel nicht hinzugefügt werden"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This time can't be added to this rule"
+msgstr "Diese Zeitspanne kann der Regel nicht hinzugefügt werden"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid weekday interval: %s"
+msgstr "Ungültiges Wochentagsintervall: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unsupported simultaneous month and week selector"
+msgstr "Dieser gleichzeitige Monats- und Wochenselektor wird nicht unterstützt"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid month: %s"
+msgstr "Ungültiger Monat: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unsupported month selector: %s"
+msgstr "Nicht unterstützter Monatsselektor: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid date selector"
+msgstr "Ungültiger Datumsselektor"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unreadable string"
+msgstr "Unlesbare Zeichenkette"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start month"
+msgstr "Ungültiger Startmonat"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start week"
+msgstr "Ungültige Startwoche"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start day"
+msgstr "Ungültiger Starttag"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Missing end day"
+msgstr "Fehlender Endtag"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday type"
+msgstr "Ungültiger Ferientyp"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This time range is identical to another one"
+msgstr "Diese Zeitspanne existiert schon"

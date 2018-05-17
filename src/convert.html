@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+
+		<style type="text/css">
+			pre {
+				max-width: 100vw;
+				overflow-wrap: break-word;
+				white-space: pre-wrap;
+				width: 100vw;
+				word-wrap: break-word;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Select file .mo:</p>
+		<input type="file" id="file">
+		<pre id="result" style="max-width: 100vw;"></pre>
+
+		<script src="js/jed.js"></script>
+		<script src="js/jed-gettext-parser.js"></script>
+		<script>
+			document.getElementById('file').addEventListener('change', function (e) {
+				let files = e.target.files,
+					file = (!files || !files.length) ? null : files[0];
+
+				if (!file) {
+					return;
+				}
+
+				let options = {
+					lang: window.prompt('ISO-2 language code', 'en'),
+					encoding: window.prompt('Encoding', 'utf-8')
+				};
+
+				let fileReader = new FileReader();
+				fileReader.onloadend = function () {
+					let localeData = jedGettextParser.mo.parse(fileReader.result, options);
+					document.getElementById('result').innerText = JSON.stringify(localeData);
+				};
+				fileReader.readAsArrayBuffer(file);
+//				let localeData = jedGettextParser.mo.parse(fileReader.result);
+//
+//				document.getElementById('result').innerText = JSON.stringify(localeData);
+
+				this.value = null;
+			});
+		</script>
+	</body>
+</html>

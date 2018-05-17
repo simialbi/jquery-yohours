@@ -1,0 +1,337 @@
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Calendar defining"
+msgstr "Calendar defining"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Select date range"
+msgstr "Select date range"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Always"
+msgstr "Always"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Month"
+msgstr "Month"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Week"
+msgstr "Week"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Day"
+msgstr "Day"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Holiday"
+msgstr "Holiday"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "This calendar will define all weeks of the year"
+msgstr "This calendar will define all weeks of the year"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end month is optional"
+msgstr "The end month is optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end week is optional"
+msgstr "The end week is optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "The end day is optional"
+msgstr "The end day is optional"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "(not set)"
+msgstr "(not set)"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Start"
+msgstr "Start"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "End"
+msgstr "End"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "January"
+msgstr "January"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "February"
+msgstr "February"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "March"
+msgstr "March"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "April"
+msgstr "April"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "May"
+msgstr "May"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "June"
+msgstr "June"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "July"
+msgstr "July"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "August"
+msgstr "August"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "September"
+msgstr "September"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "October"
+msgstr "October"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "November"
+msgstr "November"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "December"
+msgstr "December"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "School holidays"
+msgstr "School holidays"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Public holidays"
+msgstr "Public holidays"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Easter"
+msgstr "Easter"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Close"
+msgstr "Close"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "OK"
+msgstr "OK"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "All year"
+msgstr "All year"
+
+#: src/js/yohours.js
+msgctxt "yohours"
+msgid "Add new date range"
+msgstr "Add new date range"
+
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week of year"
+msgstr "every week of year"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "invalid time"
+msgstr "invalid time"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from %s %u to %s %u"
+msgstr "every week from %s %u to %s %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "day %s %u"
+msgstr "day %s %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from week %u to %u"
+msgstr "every week from week %u to %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "week %u"
+msgstr "week %u"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week from %s to %s"
+msgstr "every week from %s to %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week in %s"
+msgstr "every week in %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every week during school holidays"
+msgstr "every week during school holidays"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "every public holidays"
+msgstr "every public holidays"
+
+#: src/js/yohours.js
+msgctxt "yohours/timespan"
+msgid "each easter day"
+msgstr "each easter day"
+
+
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start day and month can't be null"
+msgstr "Start day and month can't be null"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start week can't be null"
+msgstr "Start week can't be null"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Start month can't be null"
+msgstr "Start month can't be null"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday, must be PH, SH or easter"
+msgstr "Invalid holiday, must be PH, SH or easter"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday type: %s"
+msgstr "Invalid holiday type: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid interval"
+msgstr "Invalid interval"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Missing parameter"
+msgstr "Missing parameter"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid parameter"
+msgstr "Invalid parameter"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This date can't be added to this rule"
+msgstr "This date can't be added to this rule"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This time can't be added to this rule"
+msgstr "This time can't be added to this rule"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid weekday interval: %s"
+msgstr "Invalid weekday interval: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unsupported simultaneous month and week selector"
+msgstr "Unsupported simultaneous month and week selector"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid month: %s"
+msgstr "Invalid month: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unsupported month selector: %s"
+msgstr "Unsupported month selector: %s"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid date selector"
+msgstr "Invalid date selector"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Unreadable string"
+msgstr "Unreadable string"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start month"
+msgstr "Invalid start month"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start week"
+msgstr "Invalid start week"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid start day"
+msgstr "Invalid start day"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Missing end day"
+msgstr "Missing end day"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "Invalid holiday type"
+msgstr "Invalid holiday type"
+
+#: src/js/yohours.js
+msgctxt "yohours/notifications"
+msgid "This time range is identical to another one"
+msgstr "This time range is identical to another one"

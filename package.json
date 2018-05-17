@@ -1,0 +1,36 @@
+{
+	"name": "jquery-yohours",
+	"description": "Input widget to create opening_hours data",
+	"version": "1.0.0",
+	"author": {
+		"name": "Simon Karlen",
+		"email": "simi.albi@gmail.com",
+		"url": "https://github.com/simialbi"
+	},
+	"contributors": [
+		{
+			"name": "Adrien PAVIE",
+			"email": "adrien@pavie.info",
+			"url": "https://pavie.info/realisations.html#perso"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/simialbi/jquery-yohours.git"
+	},
+	"peerDependencies": {
+		"jquery": "~3.0",
+		"bootstrap": "~3.0|~4.0"
+	},
+	"browser": "dist/js/yohours.min.js",
+	"style": "dist/css/yohours.css",
+	"keywords": [
+		"openstreetmap",
+		"jquery",
+		"plugin",
+		"opening_hours",
+		"opening",
+		"hours"
+	],
+	"license": "SEE LICENSE IN LICENSE"
+}
