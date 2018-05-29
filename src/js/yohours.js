@@ -1,6 +1,6 @@
 /* globals jQuery,window,moment,jSmart:false */
 var YoHours = YoHours || {};
-(function (window, $, moment, YoHours, jSmart, Jed, jedGettextParser) {
+(function (window, $, moment, YoHours, jSmart, Jed) {
 	'use strict';
 
 	let i18n;
@@ -3155,7 +3155,7 @@ var YoHours = YoHours || {};
 		}
 
 		this._calendarView.init();
-		$('#' + opts.idPrefix + 'yo-hours-collapse').removeClass(['show', 'in']);
+		$('#' + opts.idPrefix + 'yo-hours-collapse').removeClass('show in');
 	};
 	/**
 	 * Refreshes the view
