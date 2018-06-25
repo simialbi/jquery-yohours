@@ -2822,15 +2822,15 @@ var YoHours = YoHours || {};
 				if (interval !== undefined) {
 					//Single minute event
 					if (interval.getStartDay() === interval.getEndDay() && interval.getFrom() === interval.getTo()) {
-						to = moment().startOf('isoweek').day('Monday').hour(0).minute(0).second(0).milliseconds(0).add(interval.getEndDay(), 'days').add(interval.getTo() + 1, 'minutes');
+						to = moment().startOf('isoweek').day(1).hour(0).minute(0).second(0).milliseconds(0).add(interval.getEndDay(), 'days').add(interval.getTo() + 1, 'minutes');
 					} else {
-						to = moment().startOf('isoweek').day('Monday').hour(0).minute(0).second(0).milliseconds(0).add(interval.getEndDay(), 'days').add(interval.getTo(), 'minutes');
+						to = moment().startOf('isoweek').day(1).hour(0).minute(0).second(0).milliseconds(0).add(interval.getEndDay(), 'days').add(interval.getTo(), 'minutes');
 					}
 
 					//Add event on calendar
 					eventData = {
 						id: i,
-						start: moment().startOf('isoweek').day('Monday').hour(0).minute(0).second(0).milliseconds(0).add(interval.getStartDay(), 'days').add(interval.getFrom(), 'minutes'),
+						start: moment().startOf('isoweek').day(1).hour(0).minute(0).second(0).milliseconds(0).add(interval.getStartDay(), 'days').add(interval.getFrom(), 'minutes'),
 						end: to
 					};
 					events.push(eventData);
@@ -2838,8 +2838,8 @@ var YoHours = YoHours || {};
 			}
 
 			eventConstraint = {
-				start: moment().startOf('isoweek').day('Monday').format('YYYY-MM-DD[T00:00:00]'),
-				end: moment().startOf('isoweek').day('Monday').add(7, 'days').format('YYYY-MM-DD[T00:00:00]')
+				start: moment().startOf('isoweek').day(1).format('YYYY-MM-DD[T00:00:00]'),
+				end: moment().startOf('isoweek').day(1).add(7, 'days').format('YYYY-MM-DD[T00:00:00]')
 			};
 			defaultView = 'agendaWeek';
 			colFormat = (this._mainView.isMinimal()) ? 'dd' : 'dddd';
