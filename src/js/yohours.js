@@ -3078,7 +3078,7 @@ var YoHours = YoHours || {};
 	YoHours.view.HoursInputView.prototype.init = function () {
 		let opts = this._mainView.getController().getOptions();
 		let tpl = new jSmart(YoHours.templates[opts.bootstrapVersion].inputGroup);
-		let $parent = this._field.parent();q
+		let $parent = this._field.parent();
 		let $tpl = $(tpl.fetch({
 			prefix: opts.idPrefix,
 			iconClock: YoHours.templates.iconClock,
