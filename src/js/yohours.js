@@ -571,7 +571,7 @@ var YoHours = YoHours || {};
 			//Create continuous intervals over days
 			let minuteArray = this.getAsMinutesArray();
 			let intervals = [];
-			let minStart = -1, minEnd;
+			let minStart = -1;
 
 			let min = 0, lm = minuteArray.length;
 			for (; min < lm; min++) {
@@ -715,7 +715,7 @@ var YoHours = YoHours || {};
 			//Create continuous intervals over days
 			let minuteArray = this.getAsMinutesArray();
 			let intervals = [];
-			let dayStart = -1, minStart = -1, minEnd;
+			let dayStart = -1, minStart = -1;
 
 			let day = 0, l = minuteArray.length;
 			for (; day < l; day++) {
@@ -766,7 +766,7 @@ var YoHours = YoHours || {};
 
 		//Create diff array
 		let intervals = {open: [], closed: []};
-		let dayStart = -1, minStart = -1, minEnd;
+		let dayStart = -1, minStart = -1;
 		let diffDay, m, intervalsLength;
 
 		for (let d = 0; d <= YoHours.DAYS_MAX; d++) {
@@ -2810,7 +2810,7 @@ var YoHours = YoHours || {};
 
 		let intervals = this._dateRange.getTypical().getIntervals();
 		let events = [];
-		let interval, weekId, eventData, to, eventConstraint, defaultView, colFormat;
+		let interval, eventData, to, eventConstraint, defaultView, colFormat;
 		let fctSelect, fctEdit;
 		let self = this;
 
@@ -3086,6 +3086,13 @@ var YoHours = YoHours || {};
 			iconTrash: YoHours.templates.iconTrash
 		}));
 		$tpl.find('#toReplace').replaceWith(this._field);
+		$tpl.find('.btn[data-toggle="collapse"]').each(function () {
+			$(document).on('shown.bs.collapse', $(this).data('target'), function () {
+				let $calendar = $('#' + opts.idPrefix + 'yo-hours-calendar');
+				$calendar.fullCalendar('render');
+				$calendar.fullCalendar('rerenderEvents');
+			});
+		});
 		$parent.append($tpl);
 	};
 
