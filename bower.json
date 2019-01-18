@@ -1,7 +1,7 @@
 {
 	"name": "jquery-yohours",
 	"description": "Jquery and bootstrap based input widget to create opening_hours data",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"authors": [
 		{
 			"name": "Simon Karlen",
