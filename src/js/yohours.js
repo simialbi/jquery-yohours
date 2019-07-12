@@ -2752,6 +2752,9 @@ var YoHours = YoHours || {};
 		/** The main view **/
 		this._mainView = main;
 
+		/** Calendar */
+		this._calendar= null;
+
 		/** The currently shown date range **/
 		this._dateRange = null;
 	};
@@ -2805,7 +2808,11 @@ var YoHours = YoHours || {};
 		let i;
 		let opts = this._mainView.getController().getOptions();
 		let $calendar = $('#' + opts.idPrefix + 'yo-hours-calendar');
-		$calendar.fullCalendar('destroy');
+
+		if (this._calendar) {
+			this._calendar.destroy();
+		}
+
 		this._dateRange = dateRange;
 
 		let intervals = this._dateRange.getTypical().getIntervals();
@@ -2833,8 +2840,8 @@ var YoHours = YoHours || {};
 					//Add event on calendar
 					eventData = {
 						id: i,
-						start: moment().startOf('isoweek').day(1).hour(0).minute(0).second(0).milliseconds(0).add(interval.getStartDay(), 'days').add(interval.getFrom(), 'minutes'),
-						end: to
+						start: moment().startOf('isoweek').day(1).hour(0).minute(0).second(0).milliseconds(0).add(interval.getStartDay(), 'days').add(interval.getFrom(), 'minutes').toDate(),
+						end: to.toDate()
 					};
 					events.push(eventData);
 				}
@@ -2844,9 +2851,12 @@ var YoHours = YoHours || {};
 				start: moment().startOf('isoweek').day(1).format('YYYY-MM-DD[T00:00:00]'),
 				end: moment().startOf('isoweek').day(1).add(7, 'days').format('YYYY-MM-DD[T00:00:00]')
 			};
-			defaultView = 'agendaWeek';
-			colFormat = (this._mainView.isMinimal()) ? 'dd' : 'dddd';
-			fctSelect = function (start, end) {
+			defaultView = 'timeGridWeek';
+			colFormat = (this._mainView.isMinimal()) ? {weekday: 'short'} : {weekday: 'long'};
+			fctSelect = function (info) {
+				let start = moment(info.start);
+				let end = moment(info.end);
+
 				//Add event to week intervals
 				let minStart = parseInt(start.format('H'), 10) * 60 + parseInt(start.format('m'), 10);
 				let minEnd = parseInt(end.format('H'), 10) * 60 + parseInt(end.format('m'), 10);
@@ -2863,9 +2873,9 @@ var YoHours = YoHours || {};
 
 				//Add event on calendar
 				eventData = {
-					id: weekId, start: start, end: end
+					id: weekId, start: start.toDate(), end: end.toDate()
 				};
-				$calendar.fullCalendar('renderEvent', eventData, true);
+				self._calendar.addEvent(eventData);
 
 				self._mainView.refresh();
 
@@ -2873,11 +2883,15 @@ var YoHours = YoHours || {};
 				self.simulateClick();
 			};
 
-			fctEdit = function (event, delta, revertFunc, jsEvent, ui, view) {
-				let minStart = parseInt(event.start.format('H'), 10) * 60 + parseInt(event.start.format('m'), 10);
-				let minEnd = parseInt(event.end.format('H'), 10) * 60 + parseInt(event.end.format('m'), 10);
-				let dayStart = swDayToMwDay(event.start.format('d'));
-				let dayEnd = swDayToMwDay(event.end.format('d'));
+			fctEdit = function (info) {
+				let event = info.event;
+				let start = moment(event.start);
+				let end = moment(event.end);
+
+				let minStart = parseInt(start.format('H'), 10) * 60 + parseInt(start.format('m'), 10);
+				let minEnd = parseInt(end.format('H'), 10) * 60 + parseInt(end.format('m'), 10);
+				let dayStart = swDayToMwDay(start.format('d'));
+				let dayEnd = swDayToMwDay(end.format('d'));
 
 				//All day interval
 				if (minStart === 0 && minEnd === 0 && dayEnd - dayStart >= 1) {
@@ -2904,8 +2918,8 @@ var YoHours = YoHours || {};
 					//Add event on calendar
 					eventData = {
 						id: i,
-						start: moment().hour(0).minute(0).second(0).milliseconds(0).add(interval.getFrom(), 'minutes'),
-						end: to
+						start: moment().hour(0).minute(0).second(0).milliseconds(0).add(interval.getFrom(), 'minutes').toDate(),
+						end: to.toDate()
 					};
 					events.push(eventData);
 				}
@@ -2915,9 +2929,12 @@ var YoHours = YoHours || {};
 				start: moment().format('YYYY-MM-DD[T00:00:00]'),
 				end: moment().add(1, 'days').format('YYYY-MM-DD[T00:00:00]')
 			};
-			defaultView = 'agendaDay';
-			colFormat = '[Day]';
-			fctSelect = function (start, end) {
+			defaultView = 'timeGridWeek';
+			colFormat = {day: 'numeric', month: 'long', year: 'numeric'};
+			fctSelect = function (info) {
+				let start = moment(info.start);
+				let end = moment(info.end);
+
 				//Add event to week intervals
 				let minStart = parseInt(start.format('H', 10)) * 60 + parseInt(start.format('m'), 10);
 				let minEnd = parseInt(end.format('H'), 10) * 60 + parseInt(end.format('m'), 10);
@@ -2925,9 +2942,9 @@ var YoHours = YoHours || {};
 
 				//Add event on calendar
 				eventData = {
-					id: weekId, start: start, end: end
+					id: weekId, start: start.toDate(), end: end.toDate()
 				};
-				$calendar.fullCalendar('renderEvent', eventData, true);
+				self._calendar.addEvent(eventData);
 
 				self._mainView.refresh();
 
@@ -2935,16 +2952,21 @@ var YoHours = YoHours || {};
 				self.simulateClick();
 			};
 
-			fctEdit = function (event, delta, revertFunc, jsEvent, ui, view) {
-				let minStart = parseInt(event.start.format('H'), 10) * 60 + parseInt(event.start.format('m'), 10);
-				let minEnd = parseInt(event.end.format('H'), 10) * 60 + parseInt(event.end.format('m'), 10);
+			fctEdit = function (info) {
+				let event = info.event;
+				let start = moment(event.start);
+				let end = moment(event.end);
+				let minStart = parseInt(start.format('H'), 10) * 60 + parseInt(start.format('m'), 10);
+				let minEnd = parseInt(end.format('H'), 10) * 60 + parseInt(end.format('m'), 10);
 				self._dateRange.getTypical().editInterval(event.id, new YoHours.Interval(0, 0, minStart, minEnd));
 				self._mainView.refresh();
 			};
 		}
 
 		//Create calendar
-		$calendar.fullCalendar({
+		//*
+		this._calendar = new FullCalendar.Calendar($calendar.get(0), {
+			plugins: ['timeGrid', 'interaction'],
 			header: {
 				left: '', center: '', right: ''
 			},
@@ -2952,30 +2974,38 @@ var YoHours = YoHours || {};
 			defaultView: defaultView,
 			editable: true,
 			height: opts.height,
-			columnFormat: colFormat,
-			timeFormat: 'HH:mm',
-			axisFormat: 'HH:mm',
+			columnHeaderFormat: colFormat,
+			eventTimeFormat: {
+				hour: '2-digit',
+				minute: '2-digit'
+			},
 			allDayText: '24/24',
 			allDaySlot: false,
 			slotDuration: '00:15:00',
-			slotLabelFormat: 'HH:mm',
+			slotLabelFormat: {
+				hour: '2-digit',
+				minute: '2-digit'
+			},
 			scrollTime: '06:00:00',
 			firstDay: 1,
 			eventOverlap: false,
 			events: events,
 			eventConstraint: eventConstraint,
 			selectable: true,
-			selectHelper: true,
+			selectMirror: true,
 			selectOverlap: false,
 			select: fctSelect,
-			eventClick: function (calEvent, jsEvent, view) {
-				self._dateRange.getTypical().removeInterval(calEvent.id);
-				$calendar.fullCalendar('removeEvents', calEvent._id);
+			eventClick: function (info) {
+				self._dateRange.getTypical().removeInterval(info.event.id);
+				info.event.remove();
 				self._mainView.refresh();
 			},
 			eventResize: fctEdit,
 			eventDrop: fctEdit
 		});
+
+		this._calendar.render();
+		this._calendar.rerenderEvents();
 
 		this.updateDateRangeLabel();
 		this.updateRangeNavigationBar();
@@ -3076,6 +3106,7 @@ var YoHours = YoHours || {};
 	 * Initialize HoursInputView
 	 */
 	YoHours.view.HoursInputView.prototype.init = function () {
+		let self = this;
 		let opts = this._mainView.getController().getOptions();
 		let tpl = new jSmart(YoHours.templates[opts.bootstrapVersion].inputGroup);
 		let $parent = this._field.parent();
@@ -3089,8 +3120,8 @@ var YoHours = YoHours || {};
 		$tpl.find('.btn[data-toggle="collapse"]').each(function () {
 			$(document).on('shown.bs.collapse', $(this).data('target'), function () {
 				let $calendar = $('#' + opts.idPrefix + 'yo-hours-calendar');
-				$calendar.fullCalendar('render');
-				$calendar.fullCalendar('rerenderEvents');
+				self._mainView.getCalendarView()._calendar.render();
+				self._mainView.getCalendarView()._calendar.rerenderEvents();
 			});
 		});
 		$parent.append($tpl);
@@ -3306,10 +3337,17 @@ var YoHours = YoHours || {};
 	 */
 	YoHours.ctrl.MainController.prototype.showHours = function (str) {
 		let opts = this.getOptions();
+		let calendar = this.getView().getCalendarView()._calendar;
 		if (str.length > 0) {
 			//Clear intervals
 			this._week = new YoHours.Week();
-			$('#' + opts.idPrefix + 'yo-hours-calendar').fullCalendar('removeEvents');
+
+			let events = calendar.getEvents();
+			calendar.batchRendering(function () {
+				$.each(events, function () {
+					this.remove();
+				});
+			});
 
 			//Parse given string
 			try {
