@@ -3342,12 +3342,14 @@ var YoHours = YoHours || {};
 			//Clear intervals
 			this._week = new YoHours.Week();
 
-			let events = calendar.getEvents();
-			calendar.batchRendering(function () {
-				$.each(events, function () {
-					this.remove();
+			if (calendar) {
+				let events = calendar.getEvents();
+				calendar.batchRendering(function () {
+					$.each(events, function () {
+						this.remove();
+					});
 				});
-			});
+			}
 
 			//Parse given string
 			try {
