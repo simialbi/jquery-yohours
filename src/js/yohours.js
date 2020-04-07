@@ -3404,6 +3404,10 @@ var YoHours = YoHours || {};
 						i18n = new Jed({
 							domain: 'messages', locale_data: YoHours.locale[locale]
 						});
+					} else {
+						i18n = new Jed({
+							domain: 'messages', locale_data: {}
+						});
 					}
 				}
 
