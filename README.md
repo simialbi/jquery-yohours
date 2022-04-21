@@ -57,7 +57,7 @@ The elements which are present in the [opening_hours formal specification](https
 
 #### Requirements
 * [jquery](https://jquery.com)
-* [bootstrap 3 | 4](https://getbootstrap.com)
+* [bootstrap 3 | 4 | 5](https://getbootstrap.com)
 * [moment.js](https://momentjs.com)
 * [fullcalendar 4](https://fullcalendar.io)
 * [jSmart](https://github.com/umakantp/jsmart)
@@ -85,7 +85,7 @@ plugin assets into your project (dist folder contents).
 Load the following in your header:
 
 ```html
-<!-- bootstrap 3 and 4 are supported -->
+<!-- bootstrap 3, 4 and 5 are supported -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css" crossorigin="anonymous">
@@ -122,7 +122,7 @@ Load the following in your header:
 
 <script>
 	$('#myOpeningHours').yoHours({
-		bootstrapVersion: 'bootstrap3', // or bootstrap4
+		bootstrapVersion: 'bootstrap3', // or bootstrap4 or bootstrap5
 		delay: 700, // in ms, delay before plugin starts parsing input string
 		height: 600, // in pixels, max height of calendar
 		locale: 'en' // must be loaded before yohours like in example above
